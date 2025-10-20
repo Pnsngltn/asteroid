@@ -38,6 +38,7 @@ def main():
                 return  
         screen.fill((0, 0, 0))
         updatable.update(dt)
+
         
         for asteroid in asteroids:
 
