@@ -41,10 +41,13 @@ def main():
 
         
         for asteroid in asteroids:
-
             if asteroid.collision(player):
                 print("Game Over")
                 return 
+            for shot in shots:
+                if shot.collision(asteroid):
+                    shot.kill()
+                    asteroid.split()
 
         for item in drawable:
             item.draw(screen)
